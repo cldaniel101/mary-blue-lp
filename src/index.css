@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated color scheme to match Serenity Blue visual identity */
+    /* White background as requested */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 210 20% 18%; /* #2E3A44 - Professional Gray */
+
+    /* Muted colors using Ice Blue */
+    --muted: 200 50% 96%; /* #E6F4FA - Ice Blue */
+    --muted-foreground: 210 20% 18% / 0.7; /* Professional Gray with opacity */
+    --muted-foreground-light: 210 20% 18% / 0.5;
+    --muted-foreground-dark: 210 20% 18% / 0.6;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 18%;
+
+    /* Primary colors using Serenity Blue */
+    --primary: 200 50% 49%; /* #3C8DBC - Serenity Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --primary-dark: 200 60% 40%; /* Darker variant of Serenity Blue */
+    --primary-light: 200 50% 96%; /* #E6F4FA - Ice Blue for lighter accents */
+
+    /* Secondary using Calming Green */
+    --secondary: 140 30% 70%; /* #A8D5BA - Calming Green */
+    --secondary-foreground: 210 20% 18%; /* Professional Gray */
+
+    --accent: 200 50% 96%; /* Ice Blue */
+    --accent-foreground: 210 20% 18%;
+
+    --border: 210 20% 18% / 0.08;
+    --border-light: 210 20% 18% / 0.1;
+    --border-dark: 210 20% 18% / 0.05;
+
+    --ring: 200 50% 49%; /* Serenity Blue */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
