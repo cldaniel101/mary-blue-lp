@@ -1,10 +1,16 @@
 import React from "react"
+import RippleButton from "./ripple-button"
 
 export default function Header() {
   return (
     <header className="relative z-20 flex items-center justify-between p-6">
       {/* Logo */}
       <div className="flex items-center w-24">
+        <img 
+          src="/src/assets/logos/logo-oficial.png" 
+          alt="Mary Blue - Saúde Integrativa" 
+          className="h-12 w-auto object-contain ml-5"
+        />
       </div>
 
       {/* Navigation */}
@@ -36,9 +42,9 @@ export default function Header() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </button>
-        <button className="px-6 py-2 rounded-full bg-white text-text font-body font-medium text-sm transition-all duration-300 hover:bg-secondary cursor-pointer h-10 flex items-center z-10">
+        <RippleButton className="z-10">
           Agendar Consulta
-        </button>
+        </RippleButton>
       </div>
     </header>
   )

@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
-import type { HTMLAttributes, ReactNode } from "react"
+import React, { type ReactNode } from "react"
 
-interface AnimatedSectionProps extends HTMLAttributes<HTMLDivElement> {
+interface AnimatedSectionProps {
   children: ReactNode
   delay?: number
+  className?: string
+  id?: string
 }
 
-export function AnimatedSection({ children, className, delay = 0, ...props }: AnimatedSectionProps) {
+export function AnimatedSection({ children, className, delay = 0, id }: AnimatedSectionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
@@ -14,7 +16,7 @@ export function AnimatedSection({ children, className, delay = 0, ...props }: An
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay }}
       className={className}
-      {...props}
+      id={id}
     >
       {children}
     </motion.div>

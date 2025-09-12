@@ -60,7 +60,7 @@ const testimonials = [
   },
 ]
 
-const TestimonialCard = ({ quote, name, company, avatar, type }) => {
+const TestimonialCard = ({ quote, name, company, avatar, type }: { quote: string; name: string; company: string; avatar: string; type: string }) => {
   const isLargeCard = type.startsWith("large")
   const avatarSize = isLargeCard ? 48 : 36
   const avatarBorderRadius = isLargeCard ? "rounded-[41px]" : "rounded-[30.75px]"
@@ -70,7 +70,7 @@ const TestimonialCard = ({ quote, name, company, avatar, type }) => {
   let quoteClasses = ""
   let nameClasses = ""
   let companyClasses = ""
-  let backgroundElements = null
+  let backgroundElements: React.ReactElement | null = null
   let cardHeight = ""
   const cardWidth = "w-full md:w-[384px]"
 

@@ -1,8 +1,9 @@
 import React from "react"
+import RippleButton from "./ripple-button"
 
 export default function HeroContent() {
   return (
-    <main className="absolute bottom-8 left-8 z-20 max-w-2xl">
+    <main className="absolute bottom-8 left-8 z-20 max-w-3xl">
       <div className="text-left">
         <div
           className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6 relative"
@@ -34,9 +35,9 @@ export default function HeroContent() {
           <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-body font-regular text-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 cursor-pointer">
             Nossos Tratamentos
           </button>
-          <button className="px-8 py-3 rounded-full bg-white text-text font-body font-regular text-sm transition-all duration-200 hover:bg-white/90 cursor-pointer">
+          <RippleButton>
             Agendar Consulta
-          </button>
+          </RippleButton>
         </div>
       </div>
     </main>
