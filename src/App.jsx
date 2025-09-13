@@ -8,6 +8,7 @@ import { CTASection } from "./components/cta-section"
 import { FooterSection } from "./components/footer-section"
 import { AnimatedSection } from "./components/animated-section"
 import { HowItWorksSection } from "./components/how-it-works-section"
+import { AboutSection } from "./components/about-section"
 import './App.css'
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
         
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[100px] md:mt-[100px]" delay={0.1}>
           <SocialProof />
+        </AnimatedSection>
+
+        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.15}>
+          <AboutSection />
         </AnimatedSection>
 
         {/* Seção Como Funciona */}

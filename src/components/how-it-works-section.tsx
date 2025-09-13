@@ -87,9 +87,9 @@ export function HowItWorksSection() {
         {/* Header */}
         <div className="flex flex-col justify-center items-center gap-4 text-center animate-in slide-in-from-bottom-4 fade-in duration-700">
           <h2 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-[66px] max-w-4xl">
-            Como funciona
+            Como funciona?
             <span className="block text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/70 mt-2">
-              (passo a passo)
+              Passo a passo
             </span>
           </h2>
         </div>
