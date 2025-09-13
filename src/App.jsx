@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from "./components/Hero/Hero"
 import { SocialProof } from "./components/social-proof"
-import { BentoSection } from "./components/bento-section"
+import { BentoSection } from "./components/BentoSection/bento-section"
 import { TestimonialGridSection } from "./components/testimonial-grid-section"
 import { FAQSection } from "./components/faq-section"
 import { CTASection } from "./components/cta-section"
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pb-0">
       <div className="relative z-10">
-        <Hero />
+        {/* <Hero /> */}
         
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[100px] md:mt-[100px]" delay={0.1}>
           <SocialProof />

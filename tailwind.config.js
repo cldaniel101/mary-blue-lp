@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': '1500px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

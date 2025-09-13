@@ -115,9 +115,6 @@ export function CTASection() {
             Agendar Consulta no WhatsApp
           </Button>
         </a>
-        <p className="text-muted-foreground text-sm md:text-base font-medium leading-relaxed text-center max-w-2xl">
-          Seg–sex 8h–18h • sáb 9h–15h — atendimento humanizado e personalizado para sua dor.
-        </p>
       </div>
     </section>
   )
