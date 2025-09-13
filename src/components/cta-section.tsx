@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "./ui/button"
+import RippleButton from "./Hero/ripple-button"
 
 export function CTASection() {
   return (
@@ -108,12 +109,13 @@ export function CTASection() {
           </h2>
         </div>
         <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
-          <Button
+          {/* <Button
             className="px-[30px] py-2 bg-secondary text-secondary-foreground text-base font-medium leading-6 rounded-[99px] shadow-[0px_0px_0px_4px_rgba(255,255,255,0.13)] hover:bg-secondary/90 transition-all duration-200"
             size="lg"
           >
             Agendar Consulta no WhatsApp
-          </Button>
+          </Button> */}
+          <RippleButton variant="secondary">Agendar Consulta no WhatsApp</RippleButton>
         </a>
       </div>
     </section>

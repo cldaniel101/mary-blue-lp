@@ -1,11 +1,13 @@
 
 import React from "react"
 import { Instagram, Mail, MessageCircle, MapPin, Shield, FileText, Heart } from "lucide-react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export function FooterSection() {
   return (
     <footer className="w-full bg-gradient-to-b from-[#E6F4FA] to-white border-t border-[#3C8DBC]/10">
-      <div className="max-w-[1320px] mx-auto px-5 py-12 md:py-16 ">
+      <div className="max-w-[1320px] mx-auto px-5 pt-12 pb-5 ">
 
         {/* Main Footer Content */}
         <div className="py-10 grid gap-8 md:grid-cols-3 md:items-center">
@@ -25,7 +27,7 @@ export function FooterSection() {
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300"
+                className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
               >
                 {item}
               </a>
@@ -35,7 +37,7 @@ export function FooterSection() {
           {/* DIREITA: Redes Sociais */}
           <div className="flex justify-start md:justify-end gap-3">
             <SocialButton 
-              href="https://instagram.com/Mary_Ozonio" 
+              href="https://www.instagram.com/maryblue_saude/" 
               label="Instagram"
               bgColor="bg-[#E4405F]"
             >
@@ -46,7 +48,7 @@ export function FooterSection() {
               label="WhatsApp"
               bgColor="bg-[#25D366]"
             >
-              <MessageCircle className="w-4 h-4" />
+              <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" />
             </SocialButton>
             <SocialButton 
               href="mailto:contato.marybluelife@gmail.com" 
@@ -108,16 +110,6 @@ export function FooterSection() {
                 © 2025 Cláudio Daniel | <a href="https://danieldev.dev.br" target="_blank" className="hover:underline">danieldev.dev.br </a> 
                 | <a href="https://instagram.com/danieldevweb" target="_blank" className="hover:underline">@danieldevweb</a>
               </span>
-
-            </div>
-            <div className="flex gap-4 text-xs text-[#2E3A44]/60 font-['Inter']">
-              <a href="#termos" className="hover:text-[#3C8DBC] transition-colors duration-300">
-                Termos de Uso
-              </a>
-              <span>•</span>
-              <a href="#privacidade" className="hover:text-[#3C8DBC] transition-colors duration-300">
-                Política de Privacidade
-              </a>
             </div>
           </div>
         </div>

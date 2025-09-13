@@ -5,9 +5,10 @@ interface RippleButtonProps {
   className?: string
   onClick?: () => void
   href?: string
+  variant?: 'default' | 'secondary' | 'primary'
 }
 
-export default function RippleButton({ children, className = "", onClick, href }: RippleButtonProps) {
+export default function RippleButton({ children, className = "", onClick, href, variant = 'default' }: RippleButtonProps) {
   const [rippleStyle, setRippleStyle] = useState<{ x: number; y: number } | null>(null)
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -21,6 +22,33 @@ export default function RippleButton({ children, className = "", onClick, href }
     setRippleStyle(null)
   }
 
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'secondary':
+        return {
+          backgroundColor: 'hsl(var(--secondary))',
+          color: 'hsl(var(--secondary-foreground))',
+          rippleColor: 'hsl(var(--secondary-foreground))',
+          hoverColor: 'hsl(var(--primary-foreground))'
+        }
+      case 'primary':
+        return {
+          backgroundColor: 'hsl(var(--primary))',
+          color: 'hsl(var(--primary-foreground))',
+          rippleColor: 'hsl(var(--primary-foreground))',
+          hoverColor: 'hsl(var(--primary))'
+        }
+      default:
+        return {
+          backgroundColor: 'white',
+          color: '#1a1a1a',
+          rippleColor: '#1a1a1a',
+          hoverColor: 'white'
+        }
+    }
+  }
+
+  const variantStyles = getVariantStyles()
   const Component = href ? 'a' : 'button'
 
   return (
@@ -30,8 +58,8 @@ export default function RippleButton({ children, className = "", onClick, href }
           position: relative;
           display: inline-block;
           padding: 12px 32px;
-          background-color: white;
-          color: #1a1a1a;
+          background-color: ${variantStyles.backgroundColor};
+          color: ${variantStyles.color};
           border-radius: 9999px;
           text-decoration: none;
           overflow: hidden;
@@ -51,7 +79,7 @@ export default function RippleButton({ children, className = "", onClick, href }
           transform: translate(-50%, -50%);
           width: 0;
           height: 0;
-          background-color: #1a1a1a;
+          background-color: ${variantStyles.rippleColor};
           border-radius: 50%;
           transition: width 0.5s ease, height 0.5s ease;
           z-index: 0;
@@ -69,7 +97,7 @@ export default function RippleButton({ children, className = "", onClick, href }
         }
 
         .ripple-button:hover span {
-          color: white;
+          color: ${variantStyles.hoverColor};
         }
       `}</style>
       <Component
