@@ -3,6 +3,7 @@ import React from "react"
 import { Instagram, Mail, Shield, FileText, Heart } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import logoOficial from '../assets/logos/logo-oficial.png';
 
 export function FooterSection() {
   return (
@@ -15,7 +16,7 @@ export function FooterSection() {
           {/* ESQUERDA: Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/src/assets/logos/logo-oficial.png" 
+              src={logoOficial} 
               alt="Mary Blue Life" 
               className="w-40 rounded-full object-cover"
             />  

@@ -1,15 +1,20 @@
-  import React from "react"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 
+import certificado1 from '../assets/certificados-logos/1.png'
+import certificado2 from '../assets/certificados-logos/2.png'
+import certificado3 from '../assets/certificados-logos/3.png'
+import certificado4 from '../assets/certificados-logos/4.png'
+import certificado5 from '../assets/certificados-logos/5.png'
+
 export function SocialProof() {
   const certificados = [
-    { src: "/src/assets/certificados-logos/1.png", alt: "Certificado 1" },
-    { src: "/src/assets/certificados-logos/2.png", alt: "Certificado 2" },
-    { src: "/src/assets/certificados-logos/3.png", alt: "Certificado 3" },
-    { src: "/src/assets/certificados-logos/4.png", alt: "Certificado 4" },
-    { src: "/src/assets/certificados-logos/5.png", alt: "Certificado 5" },
+    { src: certificado1, alt: "Certificado 1" },
+    { src: certificado2, alt: "Certificado 2" },
+    { src: certificado3, alt: "Certificado 3" },
+    { src: certificado4, alt: "Certificado 4" },
+    { src: certificado5, alt: "Certificado 5" },
   ]
 
   // Duplicar os certificados para criar um loop mais suave

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import RippleButton from "./ripple-button"
+import logoOficial from '../../assets/logos/logo-oficial.png'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -53,7 +54,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center w-24">
           <img 
-            src="/src/assets/logos/logo-oficial.png" 
+            src={logoOficial} 
             alt="Mary Blue - Saúde Integrativa" 
             className="h-12 w-auto object-contain ml-5"
           />

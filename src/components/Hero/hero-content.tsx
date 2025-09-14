@@ -1,5 +1,5 @@
-import React from "react"
 import RippleButton from "./ripple-button"
+import maryBlueMockCircle from '../../assets/img/mary-blue-mock-circle.png'
 
 export default function HeroContent() {
   return (
@@ -57,7 +57,7 @@ export default function HeroContent() {
             
             {/* Imagem Mary Blue */}
             <img 
-              src="/src/assets/img/mary-blue-mock-circle.png" 
+              src={maryBlueMockCircle} 
               alt="Mary Blue - Profissional de Terapias Integrativas" 
               className="relative z-10 w-[70%] lg:w-full m-auto h-auto object-contain transition-all duration-500 hover:scale-105 hover:drop-shadow-2xl"
               style={{
