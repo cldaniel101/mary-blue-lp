@@ -1,6 +1,5 @@
-import React from "react"
 import { Heart, Shield, Target, Sparkles } from "lucide-react"
-import maryBlueImg from '../assets/img/mary-blue.jpg'
+import maryBlueImg from '../assets/img/mary-blue-2.jpg'
 
 export function AboutSection() {
   return (
