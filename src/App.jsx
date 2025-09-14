@@ -15,18 +15,17 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pb-0">
       <div className="relative z-10">
-        {/* <Hero /> */}
+        <Hero />
         
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[100px] md:mt-[100px]" delay={0.1}>
           <SocialProof />
         </AnimatedSection>
 
-        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.15}>
+        <AnimatedSection id="sobre" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.15}>
           <AboutSection />
         </AnimatedSection>
 
-        {/* Seção Como Funciona */}
-        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
+        <AnimatedSection id="como-funciona" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
           <HowItWorksSection />
         </AnimatedSection>
         
@@ -42,11 +41,11 @@ function App() {
           <TestimonialGridSection />
         </AnimatedSection>
         
-        {/* <AnimatedSection id="faq-section" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
+        <AnimatedSection id="faq-section" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
           <FAQSection />
-        </AnimatedSection> */}
+        </AnimatedSection>
         
-        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-8" delay={0.2}>
+        <AnimatedSection id="contato" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-8" delay={0.2}>
           <CTASection />
         </AnimatedSection>
         

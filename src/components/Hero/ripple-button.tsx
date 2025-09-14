@@ -24,6 +24,13 @@ export default function RippleButton({ children, className = "", onClick, href, 
 
   const getVariantStyles = () => {
     switch (variant) {
+      case 'default':
+        return {
+          backgroundColor: 'white',
+          color: '#1a1a1a',
+          rippleColor: '#1a1a1a',
+          hoverColor: 'white'
+        }
       case 'secondary':
         return {
           backgroundColor: 'hsl(var(--secondary))',
