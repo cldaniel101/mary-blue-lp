@@ -24,13 +24,6 @@ export default function RippleButton({ children, className = "", onClick, href, 
 
   const getVariantStyles = () => {
     switch (variant) {
-      case 'default':
-        return {
-          backgroundColor: 'white',
-          color: '#1a1a1a',
-          rippleColor: '#1a1a1a',
-          hoverColor: 'white'
-        }
       case 'secondary':
         return {
           backgroundColor: 'hsl(var(--secondary))',
@@ -45,6 +38,7 @@ export default function RippleButton({ children, className = "", onClick, href, 
           rippleColor: 'hsl(var(--primary-foreground))',
           hoverColor: 'hsl(var(--primary))'
         }
+      case 'default':
       default:
         return {
           backgroundColor: 'white',
@@ -57,11 +51,14 @@ export default function RippleButton({ children, className = "", onClick, href, 
 
   const variantStyles = getVariantStyles()
   const Component = href ? 'a' : 'button'
+  
+  // Create a unique class name for this button instance to avoid conflicts
+  const uniqueClass = `ripple-button-${Math.random().toString(36).substr(2, 9)}`
 
   return (
     <>
       <style>{`
-        .ripple-button {
+        .${uniqueClass} {
           position: relative;
           display: inline-block;
           padding: 12px 32px;
@@ -78,7 +75,7 @@ export default function RippleButton({ children, className = "", onClick, href, 
           font-weight: 400;
         }
 
-        .ripple-button::before {
+        .${uniqueClass}::before {
           content: '';
           position: absolute;
           top: var(--ripple-y, 50%);
@@ -92,23 +89,23 @@ export default function RippleButton({ children, className = "", onClick, href, 
           z-index: 0;
         }
 
-        .ripple-button:hover::before {
+        .${uniqueClass}:hover::before {
           width: 1000px;
           height: 1000px;
         }
 
-        .ripple-button span {
+        .${uniqueClass} span {
           position: relative;
           z-index: 1;
           transition: color 0.3s ease;
         }
 
-        .ripple-button:hover span {
+        .${uniqueClass}:hover span {
           color: ${variantStyles.hoverColor};
         }
       `}</style>
       <Component
-        className={`ripple-button ${className}`}
+        className={`${uniqueClass} ${className}`}
         onClick={onClick}
         href={href}
         onMouseMove={handleMouseMove}

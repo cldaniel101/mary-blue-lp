@@ -82,7 +82,7 @@ export default function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </button>
-          <RippleButton className="z-10 !bg-white">
+          <RippleButton className="z-10" variant="default">
             Agendar Consulta
           </RippleButton>
         </div>

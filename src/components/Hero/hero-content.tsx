@@ -41,7 +41,7 @@ export default function HeroContent() {
                 Nossos Tratamentos
               </button>
               <div className="w-full sm:w-auto">
-                <RippleButton className="!bg-white">
+                <RippleButton variant="default">
                   Agendar Consulta
                 </RippleButton>
               </div>

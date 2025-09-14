@@ -9,6 +9,7 @@ import { FooterSection } from "./components/footer-section"
 import { AnimatedSection } from "./components/animated-section"
 import { HowItWorksSection } from "./components/how-it-works-section"
 import { AboutSection } from "./components/about-section"
+import LocationHoursSection from "./components/Hero/location_hours_section"
 import './App.css'
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
         
         <AnimatedSection id="contato" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-8" delay={0.2}>
           <CTASection />
+        </AnimatedSection>
+        
+        <AnimatedSection id="localizacao" className="relative z-10 mt-8 md:mt-16" delay={0.2}>
+          <LocationHoursSection />
         </AnimatedSection>
         
         <FooterSection />
