@@ -1,6 +1,6 @@
 
 import React from "react"
-import { Instagram, Mail, MessageCircle, MapPin, Shield, FileText, Heart } from "lucide-react"
+import { Instagram, Mail, Shield, FileText, Heart } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -9,7 +9,7 @@ export function FooterSection() {
     <footer className="w-full bg-gradient-to-b from-[#E6F4FA] to-white border-t border-[#3C8DBC]/10">
       <div className="max-w-[1320px] mx-auto px-5 pt-12 pb-5 ">
 
-        {/* Main Footer Content */}
+        {/* Conteúdo principal do rodapé */}
         <div className="py-10 grid gap-8 md:grid-cols-3 md:items-center">
           
           {/* ESQUERDA: Logo */}
@@ -23,15 +23,42 @@ export function FooterSection() {
 
           {/* CENTRO: Navegação */}
           <nav className="flex justify-center gap-8 text-[#2E3A44]/80">
-            {["Sobre", "Serviços", "Como Funciona", "Contato"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
-              >
-                {item}
-              </a>
-            ))}
+            <a
+              href="#sobre"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              Sobre
+            </a>
+            <a
+              href="#como-funciona"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              Como Funciona
+            </a>
+            <a
+              href="#features-section"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              Tratamentos
+            </a>
+            <a
+              href="#testimonials-section"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              Depoimentos
+            </a>
+            <a
+              href="#faq-section"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              FAQ
+            </a>
+            <a
+              href="#localizacao"
+              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+            >
+              Localização
+            </a>
           </nav>
 
           {/* DIREITA: Redes Sociais */}
@@ -64,7 +91,7 @@ export function FooterSection() {
         <div className="border-t border-[#3C8DBC]/10 p-8 mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-            {/* Legal Disclaimers */}
+            {/* Avisos Legais */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-[#3C8DBC]" />
@@ -82,7 +109,7 @@ export function FooterSection() {
               </div>
             </div>
 
-            {/* Privacy Policy */}
+            {/* Política de Privacidade */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-[#3C8DBC]" />

@@ -46,7 +46,7 @@ function App() {
           <FAQSection />
         </AnimatedSection>
         
-        <AnimatedSection id="contato" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-8" delay={0.2}>
+        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-8" delay={0.2}>
           <CTASection />
         </AnimatedSection>
         

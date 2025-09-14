@@ -35,7 +35,7 @@ export default function Header() {
     { href: "#features-section", label: "Tratamentos" },
     { href: "#testimonials-section", label: "Depoimentos" },
     { href: "#faq-section", label: "FAQ" },
-    { href: "#contato", label: "Contato" }
+    { href: "#localizacao", label: "Localização" }
   ]
 
   const handleMenuClick = (href: string) => {
