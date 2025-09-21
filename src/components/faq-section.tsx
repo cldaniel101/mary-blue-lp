@@ -5,34 +5,74 @@ import { ChevronDown } from "lucide-react"
 
 const faqData = [
   {
-    question: "What is Pointer and who is it for?",
+    question: "O que é a Mary Blue Life?",
     answer:
-      "Pointer is an AI-powered development platform designed for developers, teams, and organizations who want toaccelerate their coding workflow. It's perfect for both individual developers looking to enhance their productivity and teams seeking seamless collaboration tools.",
+      "A Mary Blue Life é uma Biomédica Esteta, ozonioterapeuta e especialista em práticas integrativas. Ozonioterapia, laserterapia, Terapia Neural, Massoterapia Chinesa. Nosso objetivo é oferecer tratamentos eficazes e com resultados que aliviam dores, restauram a funcionalidade e promovem uma vida mais saudável.",
   },
   {
-    question: "How does Pointer's AI code review work?",
+    question: "Principal objetivo?",
     answer:
-      "Our AI analyzes your code in real-time, providing intelligent suggestions for improvements, catching potential bugs, and ensuring best practices. It learns from your coding patterns and adapts to your team's standards, making code reviews faster and more consistent.",
+      "Atender com as Práticas Integrativas disponíveis no SUS – (PNPIC), é um tratamento holístico, um olhar de forma integral, unindo saúde física, mental, emocional. Proporcionando saúde e bem-estar. Podendo considerar de tais patologias: Dores crônicas e tensões, Dores musculares e articulares (coluna, joelho, ombro, quadril, hérnia de disco), Fibromialgia, Processos inflamatórios, Lesões e recuperação funcional, Dores de cabeça e enxaqueca, Disfunção mitocondrial.",
   },
   {
-    question: "Can I integrate Pointer with my existing tools?",
+    question: "Qual o nível de segurança dos protocolos?",
     answer:
-      "Yes! Pointer offers one-click integrations with popular development tools including GitHub, GitLab, VS Code, Slack, and many more. Our MCP connectivity allows you to easily manage and configure server access across your entire development stack.",
+      "Nossos protocolos são seguros e individualizados. Antes de iniciar qualquer terapia, realizamos uma avaliação personalizada, explicando benefícios e possíveis limitações para cada quadro clínico.",
   },
   {
-    question: "What's included in the free plan?",
+    question: "Todas as Práticas são usadas dentro de uma janela terapêutica?",
     answer:
-      "The free plan includes real-time code suggestions, basic integrations, single MCP server connection, up to 2 AI coding agents, and Vercel deployments with Pointer branding. It's perfect for individual developers getting started.",
+      "Nossas terapias são consideradas seguras e de baixo risco, pois utilizam métodos integrativos que respeitam a fisiologia do corpo. Antes de qualquer procedimento, realizamos uma avaliação individualizada, identificando possíveis contraindicações e ajustando o protocolo para a sua condição e quadro clínico do paciente. \nO mais importante é que os tratamentos são conduzidos por profissionais habilitados. A aplicação dentro de uma janela terapêutica, garantindo que cada procedimento seja realizado com segurança, técnica e cuidado.",
   },
   {
-    question: "How do parallel coding agents work?",
+    question: "Quanto custa uma sessão?",
     answer:
-      "Our parallel coding agents can work on different parts of your codebase simultaneously, solving complex problems faster than traditional single-threaded approaches. You can launch multiple agents to handle different tasks like bug fixes, feature development, and code optimization concurrently.",
+      "Os valores são bem acessíveis, temos sessões a partir de R$150, o valor pode variar conforme a terapia indicada e a necessidade de cada paciente.",
   },
   {
-    question: "Is my code secure with Pointer?",
+    question: "Quantas sessões são necessárias?",
     answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, secure data transmission, and compliance with industry standards. Your code never leaves your secure environment without your explicit permission, and we offer on-premises deployment options for enterprise customers.",
+      "Depende do quadro clínico e da resposta individual. Em muitos pacientes, os primeiros resultados já aparecem nas primeiras sessões. Após a avaliação, indicamos um plano de tratamento adequado para cada caso clínico.",
+  },
+  {
+    question: "Preciso de encaminhamento médico para iniciar?",
+    answer:
+      "Necessariamente não, mas se o paciente já estiver com o diagnóstico médico, adianta bem a avaliação e o início da terapia mais apropriada para a sua necessidade.",
+  },
+  {
+    question: "Como agendar uma consulta?",
+    answer:
+      "Você pode agendar de forma prática pelo WhatsApp (95) 98407-8006 ou diretamente pelo botão disponível aqui no site.",
+  },
+  {
+    question: "Onde fica a clínica?",
+    answer:
+      "Nossa clínica está localizada em Boa Vista – Roraima, em um espaço acolhedor e preparado para oferecer conforto e segurança em cada atendimento.",
+  },
+  {
+    question: "Posso combinar terapias (ex.: Ozônio + Laser + Massoterapia)? Em que ordem costuma funcionar melhor?",
+    answer:
+      "Sim! As terapias integrativas podem ser associadas, porém precisa do olhar clínico e necessidade do quadro clínico do paciente. Isso de forma segura que ofereça resultados. Muitas vezes, a associação de métodos como ozonioterapia, laserterapia e massoterapia acelera o processo de alívio da dor, melhora a circulação e promove regeneração tecidual. A ordem e a escolha das terapias dependem de uma avaliação individualizada, considerando sua condição clínica, intensidade da dor e objetivos do tratamento.",
+  },
+  {
+    question: "Vocês usam Termo de Consentimento e registram parâmetros do procedimento? Como é a higiene e a calibração de equipamentos?",
+    answer:
+      "Sim. Em cada atendimento, seguimos um padrão rigoroso de biossegurança e ética profissional:\n- Termo de Consentimento – antes do início, explicamos de forma clara os benefícios, possíveis limitações e cuidados, garantindo que o paciente esteja plenamente informado e seguro.\n- Registro de parâmetros – todos os procedimentos são documentados, incluindo técnicas utilizadas, dosagens e respostas do paciente, para acompanhamento preciso da evolução.\n- Higiene e esterilização – utilizamos materiais devidamente esterilizados e seguimos protocolos de assepsia recomendados pelas normas de saúde.\n- Calibração e manutenção de equipamentos – nossos aparelhos passam por revisões e calibrações periódicas, assegurando eficácia, precisão e segurança em cada sessão.\nAssim, garantimos não apenas resultados reais, mas também tranquilidade e confiança para quem confia sua saúde à Mary Blue Life.",
+  },
+  {
+    question: "⏱️ Qual a duração da consulta/sessão?",
+    answer:
+      "A primeira consulta, com avaliação e explicação detalhada do protocolo, costuma durar entre 40 e 60 minutos. As sessões de tratamento variam conforme a terapia escolhida, mas geralmente ficam entre 30 e 50 minutos.",
+  },
+  {
+    question: "💳 Quais são as formas de pagamento?",
+    answer:
+      "Aceitamos:\n- Dinheiro\n- Pix\n- Cartões de crédito e débito (parcelamento sob consulta)\nNosso objetivo é oferecer facilidade e acessibilidade para que você tenha o melhor tratamento sem complicações.",
+  },
+  {
+    question: "📅 Qual é a política de remarcação e cancelamento?",
+    answer:
+      "Sabemos que imprevistos acontecem. Por isso:\n- As sessões podem ser remarcadas com até 24h de antecedência, sem custo.\n- Cancelamentos feitos em cima da hora podem implicar em cobrança parcial ou perda da sessão, dependendo do caso.\nEssa política existe para garantir a organização da agenda e o melhor atendimento para todos os pacientes.",
   },
 ]
 
@@ -71,7 +111,9 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         <div
           className={`px-5 transition-all duration-500 ease-out ${isOpen ? "pb-[18px] pt-2 translate-y-0" : "pb-0 pt-0 -translate-y-2"}`}
         >
-          <div className="text-foreground/80 text-sm font-normal leading-6 break-words">{answer}</div>
+          <div className="text-foreground/80 text-sm font-normal leading-6 break-words whitespace-pre-line">
+            {answer}
+          </div>
         </div>
       </div>
     </div>
