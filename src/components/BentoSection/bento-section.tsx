@@ -1,7 +1,5 @@
-import React from "react"
-
 const TherapyCard = ({ title, benefits, indications }: { title: string; benefits: string; indications: string }) => (
-  <div className="group flip-container relative w-full h-64 md:h-72 lg:h-80 cursor-pointer">
+  <div className="group flip-container relative w-full h-[420px] md:h-[520px] lg:h-[600px] cursor-pointer">
     <div className="flip-inner w-full h-full transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
       {/* Face frontal - Título */}
       <div className="flip-face flip-front absolute w-full h-full backface-hidden rounded-2xl border border-white/20 overflow-hidden">
@@ -10,8 +8,8 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
           className="absolute inset-0 rounded-2xl"
           style={{
             background: "linear-gradient(135deg, rgba(60, 141, 188, 0.12) 0%, rgba(230, 244, 250, 0.18) 50%, rgba(168, 213, 186, 0.08) 100%)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
           }}
         />
         
@@ -19,15 +17,15 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 rounded-2xl" />
         
         {/* Content */}
-        <div className="absolute inset-0 flex items-center justify-center p-6 z-10">
-          <h3 className="text-foreground text-2xl font-bold text-center leading-tight">
+        <div className="absolute inset-0 flex items-center justify-center p-10 z-10">
+          <h3 className="text-foreground text-3xl md:text-4xl lg:text-5xl font-extrabold text-center leading-tight font-poppins">
             {title}
           </h3>
         </div>
         
         {/* Decorative elements */}
-        <div className="absolute top-4 right-4 w-3 h-3 bg-primary/30 rounded-full" />
-        <div className="absolute bottom-4 left-4 w-2 h-2 bg-accent/40 rounded-full" />
+        <div className="absolute top-6 right-6 w-4 h-4 bg-primary/30 rounded-full" />
+        <div className="absolute bottom-6 left-6 w-3 h-3 bg-accent/40 rounded-full" />
       </div>
 
       {/* Face traseira - Informações */}
@@ -37,8 +35,8 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
           className="absolute inset-0 rounded-2xl"
           style={{
             background: "linear-gradient(135deg, rgba(60, 141, 188, 0.15) 0%, rgba(230, 244, 250, 0.20) 50%, rgba(168, 213, 186, 0.10) 100%)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
+            backdropFilter: "blur(14px)",
+            WebkitBackdropFilter: "blur(14px)",
           }}
         />
         
@@ -46,29 +44,29 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
         <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-accent/8 rounded-2xl" />
         
         {/* Content */}
-        <div className="absolute inset-0 p-5 flex flex-col justify-center gap-4 z-10">
+        <div className="absolute inset-0 p-10 flex flex-col justify-center gap-8 z-10">
           <div>
-            <p className="text-sm font-semibold text-primary mb-2">
+            <p className="text-lg md:text-xl font-bold text-primary mb-3 font-poppins">
               Benefícios:
             </p>
-            <p className="text-sm text-foreground/90 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-inter">
               {benefits}
             </p>
           </div>
           
           <div>
-            <p className="text-sm font-semibold text-primary mb-2">
+            <p className="text-lg md:text-xl font-bold text-primary mb-3 font-poppins">
               Indicado para:
             </p>
-            <p className="text-sm text-foreground/90 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-inter">
               {indications}
             </p>
           </div>
         </div>
         
         {/* Back decorative elements */}
-        <div className="absolute top-4 left-4 w-2 h-2 bg-primary/40 rounded-full" />
-        <div className="absolute bottom-4 right-4 w-3 h-3 bg-accent/30 rounded-full" />
+        <div className="absolute top-6 left-6 w-3 h-3 bg-primary/40 rounded-full" />
+        <div className="absolute bottom-6 right-6 w-4 h-4 bg-accent/30 rounded-full" />
       </div>
     </div>
   </div>
@@ -104,8 +102,8 @@ export function BentoSection() {
   ]
 
   return (
-    <section className="w-full px-8 md:px-16 lg:px-20 xl:px-24 flex flex-col justify-center items-center overflow-visible bg-transparent">
-      <div className="w-full max-w-7xl py-8 md:py-16 relative flex flex-col justify-start items-start gap-6">
+    <section className="w-full px-4 md:px-12 lg:px-24 xl:px-32 flex flex-col justify-center items-center overflow-visible bg-transparent">
+      <div className="w-full max-w-7xl py-12 md:py-20 relative flex flex-col justify-start items-start gap-10">
         <div className="w-[547px] h-[938px] absolute top-[614px] left-[80px] origin-top-left rotate-[-33.39deg] bg-primary/10 blur-[130px] z-0" />
         <div className="self-stretch py-8 md:py-14 flex flex-col justify-center items-center gap-2 z-10">
           <div className="flex flex-col justify-start items-center gap-4">
@@ -118,7 +116,7 @@ export function BentoSection() {
         {/* Grid com última linha centralizada */}
         <div className="self-stretch z-10">
           {/* Primeiros 4 cards em grid normal */}
-          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-2 gap-12 md:gap-14 lg:gap-16">
             {therapies.slice(0, 4).map((therapy, index) => (
               <div
                 key={index}
@@ -131,9 +129,9 @@ export function BentoSection() {
           </div>
           
           {/* Último card centralizado */}
-          <div className="mt-8 md:mt-10 lg:mt-12 flex justify-center">
+          <div className="mt-12 md:mt-16 lg:mt-20 flex justify-center">
             <div 
-              className="w-full md:w-1/2 2xl:w-1/3 animate-in slide-in-from-bottom-4 fade-in duration-700"
+              className="w-full md:w-2/3 2xl:w-1/2 animate-in slide-in-from-bottom-4 fade-in duration-700"
               style={{ animationDelay: `${4 * 150}ms` }}
             >
               <TherapyCard {...therapies[4]} />

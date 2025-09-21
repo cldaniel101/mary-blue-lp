@@ -25,14 +25,14 @@ export default function HeroContent() {
             </div>
 
             {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-tight tracking-tight font-title font-extrabold text-white mb-4 lg:mb-6">
-              <div className="font-regular">Chega</div> de conviver<br />
-              com a dor.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-tight tracking-tight font-title font-regular text-white mb-4 lg:mb-6">
+              <div className="font-extrabold">Livre-se</div> das dores<br />
+              e recupere sua qualidade de vida.
             </h1>
 
             {/* Descrição */}
             <p className="text-sm sm:text-base md:text-lg font-body font-regular text-white/80 mb-6 lg:mb-8 leading-relaxed max-w-xl">
-              Terapias integrativas como Ozonioterapia, PRP e Laserterapia, com acompanhamento profissional especializado.
+              Terapias integrativas como Ozonioterapia, PRP e Laserterapia, você trata a causa do problema e volta a viver sem limitações.
             </p>
 
             {/* Botões */}

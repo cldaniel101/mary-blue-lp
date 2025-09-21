@@ -71,7 +71,7 @@ export function AboutSection() {
               {/* Título */}
               <div className="space-y-2">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                  Mary Blue
+                  Mary Blue Life é mais que um nome, é um propósito.
                 </h2>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
@@ -83,12 +83,18 @@ export function AboutSection() {
               </div>
 
               {/* Descrição */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-left lg:text-left">
                 <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
-                  <span className="font-semibold text-primary">Atendimento com autoridade e empatia:</span> cada pessoa é única, por isso a conduta nasce de uma avaliação individualizada e do diálogo claro sobre benefícios e limitações de cada método.
+                  <span className="font-semibold text-primary">👉 “Mary”</span> é o apelido da profissional Biomédica formada, especialista em Ozonioterapia, Laserterapia, Terapia Neural e outras Terapias Integrativas. A qual promove saúde de forma integral unindo corpo, mente e emoções. São práticas utilizadas junto aos tratamentos convencionais e contribuem para bem-estar e qualidade de vida.
                 </p>
-                <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl">
-                  Protocolos integrativos e personalizados priorizam <span className="font-medium text-accent">segurança, conforto e resultados reais</span>, com foco em recuperar sua funcionalidade no dia a dia.
+                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
+                  <span className="font-semibold text-primary">👉 “Blue”</span> representa o azul do ar e do ozônio, símbolo de renovação, energia e vitalidade.
+                </p>
+                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
+                  <span className="font-semibold text-primary">👉 “Life”</span> traduz a nossa missão: cuidar da sua saúde para que você viva com mais equilíbrio, bem-estar e liberdade.
+                </p>
+                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
+                  Aqui, cada atendimento é único. Com autoridade científica e empatia, criamos protocolos personalizados que priorizam segurança, conforto e resultados reais. O foco é simples: ajudar você a recuperar sua funcionalidade e voltar a viver sem limitações.
                 </p>
               </div>
 
@@ -116,7 +122,7 @@ export function AboutSection() {
           <blockquote className="relative">
             <div className="absolute -top-4 -left-4 text-6xl text-primary/20 font-serif">"</div>
             <p className="text-lg md:text-xl text-foreground/80 italic leading-relaxed px-8">
-              Cada tratamento é uma jornada única de cuidado, onde ciência e humanização se encontram para transformar vidas.
+              Aqui, cada atendimento é único. Ciência, empatia e personalização para você viver com mais liberdade e bem-estar.
             </p>
             <div className="absolute -bottom-4 -right-4 text-6xl text-primary/20 font-serif rotate-180">"</div>
           </blockquote>
