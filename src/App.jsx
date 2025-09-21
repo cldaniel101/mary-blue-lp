@@ -9,6 +9,7 @@ import { FooterSection } from "./components/footer-section"
 import { AnimatedSection } from "./components/animated-section"
 import { HowItWorksSection } from "./components/how-it-works-section"
 import { AboutSection } from "./components/about-section"
+import { WhyChooseSection } from "./components/why-choose-section"
 import LocationHoursSection from "./components/Hero/location_hours_section"
 import './App.css'
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pb-0">
       <div className="relative z-10">
-        <Hero />
+        {/* <Hero /> */}
         
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[100px] md:mt-[100px]" delay={0.1}>
           <SocialProof />
@@ -24,6 +25,10 @@ function App() {
 
         <AnimatedSection id="sobre" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.15}>
           <AboutSection />
+        </AnimatedSection>
+
+        <AnimatedSection id="por-que-escolher" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.17}>
+          <WhyChooseSection />
         </AnimatedSection>
 
         <AnimatedSection id="como-funciona" className="relative z-10 max-w-[1320px] mx-auto mt-8 md:mt-16" delay={0.2}>
