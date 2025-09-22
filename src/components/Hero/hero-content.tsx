@@ -3,13 +3,27 @@ import maryBlueMockCircle from '../../assets/img/mary-blue-mock-circle.png'
 
 export default function HeroContent() {
   return (
-    <main className="flex-1 flex flex-col z-20 min-h-0">
+    <main className="flex-1 flex flex-col z-20 min-h-0 overflow-hidden">
       {/* Grid Container */}
-      <div className="flex-1 flex flex-col lg:grid lg:grid-cols-2 lg:items-end min-h-0">
+      <div className="flex-1 flex flex-col lg:grid lg:grid-cols-2 lg:items-end min-h-0 relative">
         
         {/* Lado Esquerdo - Conteúdo */}
-        <div className="flex flex-col justify-end flex-1 lg:h-auto px-6 sm:px-8 pb-8 lg:px-12 lg:pb-12 order-1 lg:order-1 mx-8 md:mx-12 lg:mx-0">
-          <div className="text-left max-w-2xl">
+        <div className="flex flex-col justify-end flex-1 lg:h-auto px-6 sm:px-8 pb-8 lg:px-12 lg:pb-12 order-1 lg:order-1 mx-8 md:mx-12 lg:mx-0 overflow-hidden">
+          {/* <div className="
+          bg-primary absolute z-0 rounded-full 
+
+          w-[120vw] h-[650px] 
+          md:w-[800px] 
+          lg:h-[800px] 
+          xl:h-[600px] 
+          2xl:w-[900px]
+
+          left-[-100px] top-0 
+          lg:top-0 lg:left-[-150px] 
+          xl:left-[-100px] xl:top-0 
+          2xl:top-[10%]
+          "></div> */}
+          <div className="text-left max-w-2xl mt-12 z-10">
             <div
               className="inline-flex flex-row items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6 relative"
               style={{
@@ -25,7 +39,7 @@ export default function HeroContent() {
             </div>
 
             {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-tight tracking-tight font-title font-regular text-white mb-4 lg:mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-5xl leading-tight tracking-tight font-title font-regular text-white mb-4 lg:mb-6">
               <div className="font-extrabold">Livre-se</div> das dores<br />
               e recupere sua qualidade de vida.
             </h1>

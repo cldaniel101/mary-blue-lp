@@ -6,8 +6,8 @@ import HeroContent from "./hero-content"
 export default function Hero() {
   return (
     <ShaderBackground>
-      <Header />
-      <HeroContent />
+        <Header />
+        <HeroContent />
     </ShaderBackground>
   )
 }

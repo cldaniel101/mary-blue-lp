@@ -52,11 +52,12 @@ export default function Header() {
     <>
       <header className="relative z-20 flex items-center justify-between p-6 flex-shrink-0">
         {/* Logo */}
-        <div className="flex items-center w-24">
+        <div className="flex items-center w-32">
+        <div className="w-52 h-52 bg-white rounded-full absolute z-0 left-[-20px] top-[-90px]"></div>
           <img 
             src={logoOficial} 
             alt="Mary Blue - Saúde Integrativa" 
-            className="h-12 w-auto object-contain ml-5"
+            className="h-12 w-auto object-contain z-10"
           />
         </div>
 
