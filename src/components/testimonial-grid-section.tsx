@@ -60,7 +60,7 @@ export function TestimonialGridSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2E3A44] mb-4 font-['Poppins']">
             O que nossos clientes dizem
           </h2>
-          <p className="text-base md:text-lg text-[#2E3A44]/70 max-w-2xl mx-auto font-['Inter']">
+          <p className="text-lg md:text-xl text-[#2E3A44]/70 max-w-2xl mx-auto font-['Inter']">
             Veja os depoimentos reais de quem já transformou sua vida com nossos serviços
           </p>
         </div>

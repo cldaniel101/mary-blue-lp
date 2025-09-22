@@ -39,7 +39,7 @@ const ProcessStep = ({
       <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
+      <p className="text-foreground/80 text-base md:text-lg leading-relaxed">
         {description}
       </p>
     </div>
@@ -113,11 +113,11 @@ export function HowItWorksSection() {
 
         {/* Call to Action */}
         <div className="flex flex-col items-center gap-6 mt-8 animate-in slide-in-from-bottom-4 fade-in duration-700" style={{ animationDelay: "600ms" }}>
-          <p className="text-foreground/80 text-lg md:text-xl text-center max-w-2xl leading-relaxed">
+          <p className="text-foreground/80 text-xl md:text-2xl text-center max-w-2xl leading-relaxed">
             Cada etapa é cuidadosamente planejada para garantir os melhores resultados no seu tratamento.
           </p>
           <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
-            <button className="px-8 py-4 bg-primary text-white font-medium text-lg rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <button className="px-8 py-4 bg-primary text-white font-medium text-xl rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105">
               Agendar Avaliação
             </button>
           </a>

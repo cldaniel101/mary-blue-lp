@@ -26,25 +26,25 @@ export function FooterSection() {
           <nav className="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 text-[#2E3A44]/80">
             <a
               href="#sobre"
-              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+              className="font-medium font-['Inter'] text-base md:text-lg hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
             >
               Sobre
             </a>
             <a
               href="#como-funciona"
-              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+              className="font-medium font-['Inter'] text-base md:text-lg hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
             >
               Como Funciona
             </a>
             <a
               href="#features-section"
-              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+              className="font-medium font-['Inter'] text-base md:text-lg hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
             >
               Tratamentos
             </a>
             <a
               href="#testimonials-section"
-              className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
+              className="font-medium font-['Inter'] text-base md:text-lg hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
             >
               Depoimentos
             </a>

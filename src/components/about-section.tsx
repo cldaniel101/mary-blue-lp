@@ -75,7 +75,7 @@ export function AboutSection() {
                 </h2>
                 <div className="flex items-center justify-center lg:justify-start gap-2">
                   <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-                  <p className="text-lg md:text-xl text-primary font-medium">
+                  <p className="text-xl md:text-2xl text-primary font-medium">
                     Saúde Integrativa
                   </p>
                   <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary rounded-full" />
@@ -84,16 +84,16 @@ export function AboutSection() {
 
               {/* Descrição */}
               <div className="space-y-4 text-left lg:text-left">
-                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
-                  <span className="font-semibold text-primary">👉 “Mary”</span> é o apelido da profissional Biomédica formada, especialista em Ozonioterapia, Laserterapia, Terapia Neural e outras Terapias Integrativas. A qual promove saúde de forma integral unindo corpo, mente e emoções. São práticas utilizadas junto aos tratamentos convencionais e contribuem para bem-estar e qualidade de vida.
+                <p className="text-foreground/90 text-lg md:text-xl leading-relaxed max-w-2xl">
+                  <span className="font-semibold text-primary">👉 "Mary"</span> é o apelido da profissional Biomédica formada, especialista em Ozonioterapia, Laserterapia, Terapia Neural e outras Terapias Integrativas. A qual promove saúde de forma integral unindo corpo, mente e emoções. São práticas utilizadas junto aos tratamentos convencionais e contribuem para bem-estar e qualidade de vida.
                 </p>
-                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
-                  <span className="font-semibold text-primary">👉 “Blue”</span> representa o azul do ar e do ozônio, símbolo de renovação, energia e vitalidade.
+                <p className="text-foreground/90 text-lg md:text-xl leading-relaxed max-w-2xl">
+                  <span className="font-semibold text-primary">👉 "Blue"</span> representa o azul do ar e do ozônio, símbolo de renovação, energia e vitalidade.
                 </p>
-                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
-                  <span className="font-semibold text-primary">👉 “Life”</span> traduz a nossa missão: cuidar da sua saúde para que você viva com mais equilíbrio, bem-estar e liberdade.
+                <p className="text-foreground/90 text-lg md:text-xl leading-relaxed max-w-2xl">
+                  <span className="font-semibold text-primary">👉 "Life"</span> traduz a nossa missão: cuidar da sua saúde para que você viva com mais equilíbrio, bem-estar e liberdade.
                 </p>
-                <p className="text-foreground/90 text-base md:text-lg leading-relaxed max-w-2xl">
+                <p className="text-foreground/90 text-lg md:text-xl leading-relaxed max-w-2xl">
                   Aqui, cada atendimento é único. Com autoridade científica e empatia, criamos protocolos personalizados que priorizam segurança, conforto e resultados reais. O foco é simples: ajudar você a recuperar sua funcionalidade e voltar a viver sem limitações.
                 </p>
               </div>
@@ -102,15 +102,15 @@ export function AboutSection() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                 <div className="flex flex-col items-center lg:items-start gap-2 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors duration-300 shadow-xl">
                   <Target className="w-6 h-6 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Personalizado</span>
+                  <span className="text-base md:text-lg font-medium text-foreground">Personalizado</span>
                 </div>
                 <div className="flex flex-col items-center lg:items-start gap-2 p-4 rounded-xl bg-secondary/5 hover:bg-secondary/10 transition-colors duration-300 shadow-xl">
                   <Shield className="w-6 h-6 text-secondary-foreground" />
-                  <span className="text-sm font-medium text-foreground">Seguro</span>
+                  <span className="text-base md:text-lg font-medium text-foreground">Seguro</span>
                 </div>
                 <div className="flex flex-col items-center lg:items-start gap-2 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors duration-300 col-span-2 md:col-span-1 shadow-xl">
                   <Sparkles className="w-6 h-6 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Resultados Reais</span>
+                  <span className="text-base md:text-lg font-medium text-foreground">Resultados Reais</span>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export function AboutSection() {
         <div className="w-full max-w-4xl text-center animate-in slide-in-from-bottom-4 fade-in duration-700" style={{ animationDelay: "600ms" }}>
           <blockquote className="relative">
             <div className="absolute -top-4 -left-4 text-6xl text-primary/20 font-serif">"</div>
-            <p className="text-lg md:text-xl text-foreground/80 italic leading-relaxed px-8">
+            <p className="text-xl md:text-2xl text-foreground/80 italic leading-relaxed px-8">
               Aqui, cada atendimento é único. Ciência, empatia e personalização para você viver com mais liberdade e bem-estar.
             </p>
             <div className="absolute -bottom-4 -right-4 text-6xl text-primary/20 font-serif rotate-180">"</div>

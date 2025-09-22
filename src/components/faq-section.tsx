@@ -94,7 +94,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
       onClick={handleClick}
     >
       <div className="w-full px-5 py-[18px] pr-4 flex justify-between items-center gap-5 text-left transition-all duration-300 ease-out">
-        <div className="flex-1 text-foreground text-base font-medium leading-6 break-words">{question}</div>
+        <div className="flex-1 text-foreground text-lg md:text-xl font-medium leading-6 break-words">{question}</div>
         <div className="flex justify-center items-center">
           <ChevronDown
             className={`w-6 h-6 text-muted-foreground-dark transition-all duration-500 ease-out ${isOpen ? "rotate-180 scale-110" : "rotate-0 scale-100"}`}
@@ -111,7 +111,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         <div
           className={`px-5 transition-all duration-500 ease-out ${isOpen ? "pb-[18px] pt-2 translate-y-0" : "pb-0 pt-0 -translate-y-2"}`}
         >
-          <div className="text-foreground/80 text-sm font-normal leading-6 break-words whitespace-pre-line">
+          <div className="text-foreground/80 text-base md:text-lg font-normal leading-6 break-words whitespace-pre-line">
             {answer}
           </div>
         </div>
@@ -139,7 +139,7 @@ export function FAQSection() {
           <h2 className="w-full max-w-[435px] text-center text-foreground text-4xl font-semibold leading-10 break-words">
             Perguntas Frequentes
           </h2>
-          <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
+          <p className="self-stretch text-center text-muted-foreground text-lg md:text-xl font-medium leading-[22px] break-words">
             Tudo o que você precisa saber sobre nossos serviços e como podemos ajudar no seu bem-estar.
           </p>
         </div>

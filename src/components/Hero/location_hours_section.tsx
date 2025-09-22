@@ -32,7 +32,7 @@ export default function LocationHoursSection() {
               <h2 className="font-poppins text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Localização & Horários
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground font-inter">
+              <p className="mt-4 text-xl md:text-2xl text-muted-foreground font-inter">
                 Encontre-nos facilmente e agende sua consulta de forma prática e segura.
               </p>
             </div>
@@ -50,15 +50,15 @@ export default function LocationHoursSection() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-poppins text-lg font-semibold text-foreground mb-2">
+                    <h3 className="font-poppins text-xl md:text-2xl font-semibold text-foreground mb-2">
                       Onde Estamos
                     </h3>
-                    <p className="text-muted-foreground font-inter leading-relaxed">
+                    <p className="text-muted-foreground font-inter text-lg md:text-xl leading-relaxed">
                       <strong>Avenida Mário Homem de Melo, 2814</strong><br />
                       Bairro Liberdade, Boa Vista/RR<br />
                       CEP: 69309-010
                     </p>
-                    <p className="mt-2 text-sm text-muted-foreground font-inter">
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground font-inter">
                       <strong>Estacionamento:</strong> Disponível no local
                     </p>
                   </div>
@@ -75,14 +75,14 @@ export default function LocationHoursSection() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-poppins text-lg font-semibold text-foreground mb-2">
+                    <h3 className="font-poppins text-xl md:text-2xl font-semibold text-foreground mb-2">
                       Horários de Atendimento
                     </h3>
-                    <div className="space-y-1 text-muted-foreground font-inter">
+                    <div className="space-y-1 text-muted-foreground font-inter text-lg md:text-xl">
                       <p><strong>Segunda a Sexta:</strong> 08:00 às 18:00</p>
                       <p><strong>Sábado:</strong> 09:00 às 15:00</p>
                       <p><strong>Domingo:</strong> Fechado</p>
-                      <p className="text-sm mt-2 text-primary font-medium">Atendimento particular</p>
+                      <p className="text-base md:text-lg mt-2 text-primary font-medium">Atendimento particular</p>
                     </div>
                   </div>
                 </div>
@@ -98,12 +98,12 @@ export default function LocationHoursSection() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-poppins text-lg font-semibold text-foreground mb-3">
+                    <h3 className="font-poppins text-xl md:text-2xl font-semibold text-foreground mb-3">
                       Fale Conosco
                     </h3>
                     <div className="space-y-3">
                       <div className="flex flex-col gap-3">
-                        <p className="text-muted-foreground font-inter">
+                        <p className="text-muted-foreground font-inter text-lg md:text-xl">
                           <strong>WhatsApp:</strong> (95) 98407-8006
                         </p>
                         <div className="w-fit mt-3">
@@ -140,7 +140,7 @@ export default function LocationHoursSection() {
               />
             </div>
             <div className="text-center">
-              <p className="text-sm text-muted-foreground font-inter">
+              <p className="text-base md:text-lg text-muted-foreground font-inter">
                 📍 Avenida Mário Homem de Melo, 2814 - Liberdade, Boa Vista/RR
               </p>
             </div>

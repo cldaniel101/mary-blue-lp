@@ -13,7 +13,7 @@ const BenefitItem = ({ icon, text, delay }: BenefitItemProps) => (
     style={{ animationDelay: `${delay}ms` }}
   >
     {/* Ícone de check */}
-    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+    <div className="hidden flex-shrink-0 w-6 h-6 rounded-full bg-primary sm:flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
       <Check className="w-4 h-4 text-white" />
     </div>
     
@@ -23,7 +23,7 @@ const BenefitItem = ({ icon, text, delay }: BenefitItemProps) => (
     </div>
     
     {/* Texto */}
-    <p className="text-foreground text-base md:text-lg leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
+    <p className="text-foreground text-lg md:text-xl leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
       {text}
     </p>
   </div>
@@ -104,7 +104,7 @@ export function WhyChooseSection() {
               {/* Linha de apoio */}
               <div className="flex items-center justify-center gap-2 mt-4">
                 <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-                <p className="text-lg md:text-xl text-primary/80 font-medium italic animate-in slide-in-from-bottom-4 fade-in duration-700" style={{ animationDelay: "200ms" }}>
+                <p className="text-xl md:text-2xl text-primary/80 font-medium italic animate-in slide-in-from-bottom-4 fade-in duration-700" style={{ animationDelay: "200ms" }}>
                   Azul do ar e do Ozônio, símbolo de renovação, energia e vitalidade.
                 </p>
                 <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary rounded-full" />
@@ -125,11 +125,11 @@ export function WhyChooseSection() {
 
             {/* Call to Action */}
             <div className="flex flex-col items-center gap-6 mt-8 animate-in slide-in-from-bottom-4 fade-in duration-700" style={{ animationDelay: "800ms" }}>
-              <p className="text-foreground/80 text-lg md:text-xl text-center max-w-2xl leading-relaxed">
+              <p className="text-foreground/80 text-xl md:text-2xl text-center max-w-2xl leading-relaxed">
                 Experimente uma abordagem integrativa que coloca seu bem-estar em primeiro lugar.
               </p>
               <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 bg-primary text-white font-medium text-lg rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <button className="px-8 py-4 bg-primary text-white font-medium text-xl rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105">
                   Agendar Consulta
                 </button>
               </a>

@@ -48,19 +48,19 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
         {/* Content */}
         <div className="absolute inset-0 p-10 flex flex-col justify-center gap-8 z-10">
           <div>
-            <p className="text-lg md:text-xl font-bold text-primary mb-3 font-poppins">
+            <p className="text-xl md:text-2xl font-bold text-primary mb-3 font-poppins">
               Benefícios:
             </p>
-            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-inter">
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-inter">
               {benefits}
             </p>
           </div>
           
           <div>
-            <p className="text-lg md:text-xl font-bold text-primary mb-3 font-poppins">
+            <p className="text-xl md:text-2xl font-bold text-primary mb-3 font-poppins">
               Indicado para:
             </p>
-            <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-inter">
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-inter">
               {indications}
             </p>
           </div>
@@ -81,7 +81,7 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
             href={`https://wa.me/5595984078006?text=Olá! Gostaria de agendar uma consulta para ${title}.`}
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-medium text-base rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105 font-inter"
+            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-medium text-lg md:text-xl rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105 font-inter"
           >
             Agendar {title}
           </a>
