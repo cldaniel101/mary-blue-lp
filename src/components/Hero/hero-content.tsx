@@ -2,6 +2,12 @@ import RippleButton from "./ripple-button"
 import maryBlueMockCircle from '../../assets/img/mary-blue-mock-circle.png'
 
 export default function HeroContent() {
+  const whatsappNumber = "5595984078006"; // +55 95 98407-8006
+  const whatsappMsg = encodeURIComponent(
+    "Olá, gostaria de agendar uma consulta."
+  );
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+
   return (
     <main className="flex-1 flex flex-col z-20 min-h-0 overflow-hidden">
       {/* Grid Container */}
@@ -55,7 +61,7 @@ export default function HeroContent() {
                 Nossos Tratamentos
               </button>
               <div className="w-full sm:w-auto">
-                <RippleButton variant="default">
+                <RippleButton variant="default" href={whatsappHref}> 
                   Agendar Consulta
                 </RippleButton>
               </div>

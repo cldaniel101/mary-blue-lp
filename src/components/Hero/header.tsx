@@ -4,7 +4,10 @@ import logoOficial from '../../assets/logos/logo-oficial.png'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+  const whatsappNumber = "5595984078006"; // +55 95 98407-8006
+  const whatsappMsg = encodeURIComponent(
+    "Olá, gostaria de agendar uma consulta."
+  );
   // Fechar menu ao redimensionar para desktop
   useEffect(() => {
     const handleResize = () => {
@@ -48,6 +51,8 @@ export default function Header() {
     }
   }
 
+  const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+
   return (
     <>
       <header className="relative z-20 flex items-center justify-between p-6 flex-shrink-0">
@@ -84,7 +89,7 @@ export default function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </button>
-          <RippleButton className="z-10" variant="default">
+          <RippleButton className="z-10" variant="default" href={whatsappHref}>
             Agendar Consulta
           </RippleButton>
         </div>
@@ -178,6 +183,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
               className="text-lg px-8 py-4"
               variant="default"
+              href={whatsappHref}
             >
               Agendar Consulta
             </RippleButton>

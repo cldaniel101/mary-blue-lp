@@ -11,7 +11,7 @@ export function FooterSection() {
       <div className="max-w-[1320px] mx-auto px-5 pt-12 pb-5 ">
 
         {/* Conteúdo principal do rodapé */}
-        <div className="py-10 grid gap-8 md:grid-cols-3 md:items-center">
+        <div className="py-10 grid gap-8 md:grid-cols-3 md:items-center justify-center">
           
           {/* ESQUERDA: Logo */}
           <div className="flex items-center gap-3">
@@ -23,7 +23,7 @@ export function FooterSection() {
           </div>
 
           {/* CENTRO: Navegação */}
-          <nav className="flex justify-center gap-8 text-[#2E3A44]/80">
+          <nav className="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-8 text-[#2E3A44]/80">
             <a
               href="#sobre"
               className="font-medium font-['Inter'] hover:text-[#3C8DBC] underline-offset-4 hover:underline decoration-[#3C8DBC] transition-colors duration-300 whitespace-nowrap"
