@@ -1,5 +1,4 @@
 
-import React from "react"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -7,12 +6,14 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-// Importando os assets das imagens de depoimentos
+// Importando os assets das imagens de depoimentos e vídeo
 import depo1 from '../assets/testimonials/1.jpeg'
 import depo2 from '../assets/testimonials/2.jpeg'
 import depo4 from '../assets/testimonials/4.jpeg'
 import depo5 from '../assets/testimonials/5.jpeg'
 import depo6 from '../assets/testimonials/6.jpeg'
+// Vídeo de depoimento na pasta public
+const videoDepoimento = '/VID-20250923-WA0002.mp4'
 
 const testimonials = [
   {
@@ -46,6 +47,46 @@ const TestimonialCard = ({ image, alt }: { image: string; alt: string }) => {
           alt={alt}
           className="w-full h-full object-contain"   // não corta o print
         />
+      </div>
+    </div>
+  )
+}
+
+const VideoTestimonial = () => {
+  return (
+    <div className="w-full max-w-4xl mx-auto mt-16 flex flex-col items-center">
+      {/* Título do vídeo */}
+      {/* <div className="text-center mb-8">
+        <h3 className="text-2xl md:text-3xl font-bold text-[#2E3A44] mb-3 font-['Poppins']">
+          Depoimento em Vídeo
+        </h3>
+        <p className="text-lg text-[#2E3A44]/70 font-['Inter']">
+          Veja o relato completo de uma de nossas clientes
+        </p>
+      </div> */}
+      
+      {/* Container do vídeo */}
+      <div className="video-testimonial-container bg-white rounded-3xl p-4 md:p-6 shadow-xl mx-4 md:mx-0 w-fit">
+        <div className="w-object-fit flex justify-center">
+          <div className="relative bg-gray-50 rounded-2xl overflow-hidden" style={{aspectRatio: '9/16', maxHeight: '70vh', width: 'auto'}}>
+            <video
+              src={videoDepoimento}
+              controls
+              className="w-full h-full object-contain rounded-2xl"
+              preload="metadata"
+              playsInline
+              poster=""
+            />
+          
+            {/* Badge de destaque */}
+            <div className="absolute top-4 right-4 bg-[#3C8DBC] text-white px-4 py-2 rounded-full text-sm font-medium font-['Inter'] shadow-lg">
+              <svg className="inline-block w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 5v10l8-5-8-5z"/>
+              </svg>
+              Depoimento Exclusivo
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -121,6 +162,9 @@ export function TestimonialGridSection() {
             </svg>
           </button>
         </div>
+        
+        {/* Seção do vídeo depoimento */}
+        <VideoTestimonial />
       </div>
 
       <style dangerouslySetInnerHTML={{
@@ -153,6 +197,64 @@ export function TestimonialGridSection() {
           box-shadow: 0 20px 40px rgba(60, 141, 188, 0.15);
         }
         
+        .video-testimonial-container {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-testimonial-container:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 25px 50px rgba(60, 141, 188, 0.15);
+        }
+        
+        .video-testimonial-container video {
+          border-radius: 16px;
+          background-color: transparent !important;
+        }
+        
+        .video-testimonial-container video::-webkit-media-controls-panel {
+          background-color: rgba(46, 58, 68, 0.9) !important;
+          border-radius: 0 0 16px 16px;
+        }
+        
+        .video-testimonial-container video::-webkit-media-controls-play-button {
+          background-color: rgba(60, 141, 188, 0.9) !important;
+          border-radius: 50%;
+          filter: brightness(1.1);
+        }
+        
+        .video-testimonial-container video::-webkit-media-controls-current-time-display,
+        .video-testimonial-container video::-webkit-media-controls-time-remaining-display {
+          color: white !important;
+          font-family: 'Inter', sans-serif;
+        }
+        
+        /* Remove overlay azul quando pausado */
+        .video-testimonial-container video::-webkit-media-controls-overlay-play-button {
+          background-color: rgba(60, 141, 188, 0.9) !important;
+          border-radius: 50% !important;
+        }
+        
+        .video-testimonial-container video::cue {
+          background-color: transparent !important;
+        }
+        
+        /* Remove qualquer overlay ou background azul */
+        .video-testimonial-container video::-webkit-media-controls-overlay-enclosure {
+          background-color: transparent !important;
+        }
+        
+        .video-testimonial-container video::-webkit-media-controls-fullscreen-button {
+          background-color: transparent !important;
+        }
+        
+        /* Estilos para desktop - vídeo vertical centralizado */
+        @media (min-width: 641px) {
+          .video-testimonial-container > div > div {
+            max-width: 350px !important;
+            max-height: 75vh !important;
+          }
+        }
+        
         @media (max-width: 640px) {
           .testimonial-card {
             width: 260px !important;
@@ -160,6 +262,27 @@ export function TestimonialGridSection() {
           
           .testimonial-card .h-\\[400px\\] {
             height: 350px !important;
+          }
+          
+          .testimonial-card video {
+            height: 100% !important;
+            object-fit: cover;
+          }
+          
+          .video-testimonial-container {
+            margin-top: 3rem !important;
+            padding: 1rem !important;
+          }
+          
+          .video-testimonial-container > div > div {
+            max-height: 60vh !important;
+            width: 100% !important;
+            max-width: 300px !important;
+          }
+          
+          .video-testimonial-container video {
+            width: 100% !important;
+            height: 100% !important;
           }
         }
       `
