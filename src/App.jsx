@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden pb-0">
       <div className="relative z-10">
-        <Hero />
+        {/* <Hero /> */}
         
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto px-6 mt-[100px] md:mt-[100px]" delay={0.1}>
           <SocialProof />

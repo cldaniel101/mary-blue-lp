@@ -1,5 +1,6 @@
 import React from "react"
 import { Check, Heart, Award, Users, DollarSign } from "lucide-react"
+import maryAtendimento from '../assets/img/mary-atendimento.jpeg'
 
 interface BenefitItemProps {
   icon: React.ReactNode
@@ -111,16 +112,47 @@ export function WhyChooseSection() {
               </div>
             </div>
 
-            {/* Lista de benefícios */}
-            <div className="w-full max-w-4xl grid grid-cols-1 gap-4 md:gap-6">
-              {benefits.map((benefit, index) => (
-                <BenefitItem
-                  key={index}
-                  icon={benefit.icon}
-                  text={benefit.text}
-                  delay={benefit.delay}
-                />
-              ))}
+            {/* Seção com imagem e benefícios */}
+            <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              
+              {/* Imagem da Mary atendendo */}
+              <div className="order-2 lg:order-1 flex justify-center animate-in slide-in-from-left-4 fade-in duration-700" style={{ animationDelay: "400ms" }}>
+                <div className="relative group">
+                  {/* Container da imagem com efeito glass */}
+                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm border border-white/30 p-3 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                    <img
+                      src={maryAtendimento}
+                      alt="Mary Blue realizando atendimento de saúde integrativa"
+                      className="w-full h-auto max-w-md mx-auto rounded-xl object-cover shadow-lg"
+                    />
+                    
+                    {/* Overlay com gradiente sutil */}
+                    <div className="absolute inset-3 rounded-xl bg-gradient-to-t from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* Badge de destaque */}
+                    <div className="absolute top-6 right-6 bg-primary text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg animate-pulse">
+                      <Heart className="inline-block w-4 h-4 mr-1" />
+                      Cuidado Profissional
+                    </div>
+                  </div>
+                  
+                  {/* Elementos decorativos ao redor da imagem */}
+                  <div className="absolute -top-2 -left-2 w-4 h-4 bg-accent/40 rounded-full animate-bounce" style={{ animationDelay: "2s" }} />
+                  <div className="absolute -bottom-3 -right-3 w-6 h-6 bg-primary/30 rounded-full animate-bounce" style={{ animationDelay: "4s" }} />
+                </div>
+              </div>
+
+              {/* Lista de benefícios */}
+              <div className="order-1 lg:order-2 w-full grid grid-cols-1 gap-4 md:gap-6">
+                {benefits.map((benefit, index) => (
+                  <BenefitItem
+                    key={index}
+                    icon={benefit.icon}
+                    text={benefit.text}
+                    delay={benefit.delay + 200}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Call to Action */}

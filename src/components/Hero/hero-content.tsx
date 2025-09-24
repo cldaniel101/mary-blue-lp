@@ -1,5 +1,6 @@
 import RippleButton from "./ripple-button"
 import maryBlueMockCircle from '../../assets/img/mary-blue-mock-circle.png'
+import maryBlueCircle from '../../assets/img/mary-blue-circle.png'
 
 export default function HeroContent() {
   const whatsappNumber = "5595984078006"; // +55 95 98407-8006
@@ -11,10 +12,10 @@ export default function HeroContent() {
   return (
     <main className="flex-1 flex flex-col z-20 min-h-0 overflow-hidden">
       {/* Grid Container */}
-      <div className="flex-1 flex flex-col lg:grid lg:grid-cols-2 lg:items-end min-h-0 relative">
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-2 md:items-end min-h-0 relative">
         
         {/* Lado Esquerdo - Conteúdo */}
-        <div className="flex flex-col justify-end flex-1 lg:h-auto px-6 sm:px-8 pb-8 lg:px-12 lg:pb-12 order-1 lg:order-1 mx-8 md:mx-12 lg:mx-0 overflow-hidden">
+        <div className="flex flex-col justify-end flex-1 md:h-auto px-6 sm:px-8 pb-8 md:px-12 md:pb-12 order-1 md:order-1 mx-8 md:mx-0 overflow-hidden">
           {/* <div className="
           bg-primary absolute z-0 rounded-full 
 
@@ -45,15 +46,42 @@ export default function HeroContent() {
             </div>
 
             {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-5xl leading-tight tracking-tight font-title font-regular text-white mb-4 lg:mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-title font-regular text-white mb-4 md:mb-6">
               <div className="font-extrabold">Livre-se</div> das dores<br />
               e recupere sua qualidade de vida.
             </h1>
 
-            {/* Descrição */}
-            <p className="text-sm sm:text-base md:text-lg font-body font-regular text-white/80 mb-6 lg:mb-8 leading-relaxed max-w-xl">
-              Terapias integrativas como Ozonioterapia, PRP e Laserterapia, você trata a causa do problema e volta a viver sem limitações.
-            </p>
+            {/* Layout Mobile - Descrição e Imagem lado a lado */}
+            <div className="flex flex-row items-center gap-6 md:block mb-6 md:mb-8">
+              {/* Descrição */}
+              <div className="flex-1 min-w-0">
+                <p className="text-sm sm:text-base md:text-lg font-body font-regular text-white/80 leading-relaxed max-w-xl">
+                  Terapias integrativas como Ozonioterapia, PRP e Laserterapia, você trata a causa do problema e volta a viver sem limitações.
+                </p>
+              </div>
+
+              {/* Imagem Mary Blue - Mobile */}
+              <div className="flex-shrink-0 w-36 sm:w-44 md:hidden">
+                <div className="relative">
+                  {/* Gradiente atrás da imagem para melhor integração */}
+                  <div className="absolute -bottom-3 -left-3 -right-3 h-16 bg-gradient-to-t from-[#3C8DBC]/25 via-[#3C8DBC]/15 to-transparent rounded-full blur-xl"></div>
+                  
+                  {/* Imagem Mary Blue */}
+                  <img 
+                    src={maryBlueCircle} 
+                    alt="Mary Blue - Profissional de Terapias Integrativas" 
+                    className="relative z-10 w-full h-auto object-contain transition-all duration-500 hover:scale-105 hover:drop-shadow-2xl"
+                    style={{
+                      filter: "drop-shadow(0 8px 20px rgba(60, 141, 188, 0.4))",
+                    }}
+                  />
+                  
+                  {/* Elementos decorativos menores para mobile */}
+                  <div className="absolute -top-3 -left-3 w-7 h-7 rounded-full bg-gradient-to-br from-[#A8D5BA]/40 to-[#E6F4FA]/25 blur-sm animate-pulse"></div>
+                  <div className="absolute -bottom-2 -right-2 w-5 h-5 rounded-full bg-gradient-to-br from-[#3C8DBC]/50 to-transparent blur-sm animate-pulse delay-1000"></div>
+                </div>
+              </div>
+            </div>
 
             {/* Botões */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
@@ -69,29 +97,29 @@ export default function HeroContent() {
           </div>
         </div>
 
-        {/* Lado Direito - Imagem Mary Blue */}
-        <div className="relative flex items-end justify-center lg:justify-end flex-1 lg:h-auto px-4 lg:px-28 order-2 lg:order-2 mt-4 lg:mt-0">
-          <div className="relative mb-4 lg:mb-0">
+        {/* Lado Direito - Imagem Mary Blue (Desktop) */}
+        <div className="hidden md:flex relative items-end justify-center md:justify-end flex-1 md:h-auto px-4 md:px-16 lg:px-28 order-2 md:order-2 mt-4 md:mt-0">
+          <div className="relative mb-4 md:mb-0">
             {/* Gradiente atrás da imagem para melhor integração */}
-            <div className="absolute -bottom-4 -left-4 -right-4 h-24 lg:h-32 bg-gradient-to-t from-[#3C8DBC]/20 via-[#3C8DBC]/10 to-transparent rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 -right-4 h-24 md:h-28 lg:h-32 bg-gradient-to-t from-[#3C8DBC]/20 via-[#3C8DBC]/10 to-transparent rounded-full blur-xl"></div>
             
             {/* Imagem Mary Blue */}
             <img 
               src={maryBlueMockCircle} 
               alt="Mary Blue - Profissional de Terapias Integrativas" 
-              className="relative z-10 w-[70%] lg:w-full m-auto h-auto object-contain transition-all duration-500 hover:scale-105 hover:drop-shadow-2xl"
+              className="relative z-10 w-[80%] md:w-[90%] lg:w-full m-auto h-auto object-contain transition-all duration-500 hover:scale-105 hover:drop-shadow-2xl"
               style={{
                 filter: "drop-shadow(0 10px 25px rgba(60, 141, 188, 0.3))",
               }}
             />
             
             {/* Elementos decorativos */}
-            <div className="absolute -top-4 lg:-top-8 -left-4 lg:-left-8 w-12 lg:w-16 h-12 lg:h-16 rounded-full bg-gradient-to-br from-[#A8D5BA]/30 to-[#E6F4FA]/20 blur-sm animate-pulse"></div>
-            <div className="absolute -bottom-3 lg:-bottom-6 -right-3 lg:-right-6 w-8 lg:w-12 h-8 lg:h-12 rounded-full bg-gradient-to-br from-[#3C8DBC]/40 to-transparent blur-sm animate-pulse delay-1000"></div>
+            <div className="absolute -top-4 md:-top-6 lg:-top-8 -left-4 md:-left-6 lg:-left-8 w-12 md:w-14 lg:w-16 h-12 md:h-14 lg:h-16 rounded-full bg-gradient-to-br from-[#A8D5BA]/30 to-[#E6F4FA]/20 blur-sm animate-pulse"></div>
+            <div className="absolute -bottom-3 md:-bottom-4 lg:-bottom-6 -right-3 md:-right-4 lg:-right-6 w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 rounded-full bg-gradient-to-br from-[#3C8DBC]/40 to-transparent blur-sm animate-pulse delay-1000"></div>
             
             {/* Elementos flutuantes adicionais */}
-            <div className="absolute top-1/4 -right-8 w-6 h-6 rounded-full bg-[#E6F4FA]/20 animate-bounce delay-500"></div>
-            <div className="absolute top-1/3 -left-6 w-4 h-4 rounded-full bg-[#A8D5BA]/30 animate-bounce delay-700"></div>
+            <div className="absolute top-1/4 -right-6 md:-right-8 w-6 h-6 rounded-full bg-[#E6F4FA]/20 animate-bounce delay-500"></div>
+            <div className="absolute top-1/3 -left-4 md:-left-6 w-4 h-4 rounded-full bg-[#A8D5BA]/30 animate-bounce delay-700"></div>
           </div>
         </div>
       </div>
