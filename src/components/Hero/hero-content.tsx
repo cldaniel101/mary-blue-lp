@@ -12,13 +12,13 @@ export default function HeroContent() {
     <main className="flex-1 flex flex-col z-20 min-h-0 overflow-hidden">
       {/* Mobile Layout */}
       {/* Ajustes: foto menor, subtítulo maior e tudo na primeira dobra */}
-      <div className="md:hidden grid min-h-screen grid-rows-[38vh_1fr]">
-        {/* Imagem Hero Mobile - Topo (altura reduzida) */}
-        <div className="relative w-full h-full min-h-[220px] overflow-hidden flex items-end justify-center">
+      <div className="md:hidden grid min-h-screen grid-rows-[42vh_1fr]">
+        {/* Imagem Hero Mobile - Topo (altura aumentada) */}
+        <div className="relative w-full h-full min-h-[260px] overflow-hidden flex items-end justify-center">
           <img
             src={maryBlueMockCircle}
             alt="Mary Blue - Profissional de Terapias Integrativas"
-            className="w-fit h-[40vh] object-cover object-top"
+            className="w-fit h-[44vh] object-cover object-top"
             style={{
               filter: "brightness(1.1) contrast(1.05)"
             }}
@@ -49,8 +49,8 @@ export default function HeroContent() {
             <span className="text-white/90 text-xs font-body font-medium relative z-10">Boa Vista - Roraima</span>
           </div>
 
-          {/* Título Principal */}
-          <h1 className="text-3xl sm:text-4xl leading-snug tracking-tight font-title font-regular text-white mb-3">
+          {/* Título Principal (tamanho aumentado) */}
+          <h1 className="text-4xl sm:text-5xl leading-snug tracking-tight font-title font-regular text-white mb-3">
             <div className="font-extrabold">Livre-se</div> das dores<br />
             e recupere sua qualidade de vida.
           </h1>
