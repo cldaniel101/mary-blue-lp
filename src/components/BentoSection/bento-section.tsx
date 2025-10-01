@@ -117,6 +117,11 @@ export function BentoSection() {
       title: "Massoterapia",
       benefits: "melhora circulação, flexibilidade e qualidade do sono; reduz tensão muscular e estresse; contribui para analgesia global.",
       indications: "dores musculares difusas, rigidez, estresse, fadiga e manutenção do bem-estar."
+    },
+    {
+      title: "Terapia Ortomolecular",
+      benefits: "mais energia e disposição, fortalecimento da imunidade, melhora da pele, unhas e cabelo, ação antioxidante e apoio no controle do envelhecimento precoce.",
+      indications: "pessoas que sofrem com estresse, fadiga, baixa imunidade, doenças crônicas (como diabetes e hipertensão), além de quem busca bem-estar, vitalidade e qualidade de vida."
     }
   ]
 
@@ -136,7 +141,7 @@ export function BentoSection() {
         <div className="self-stretch z-10">
           {/* Primeiros 4 cards em grid normal */}
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-2 gap-16 md:gap-20 lg:gap-24">
-            {therapies.slice(0, 4).map((therapy, index) => (
+            {therapies.map((therapy, index) => (
               <div
                 key={index}
                 className="animate-in slide-in-from-bottom-4 fade-in duration-700"
@@ -145,16 +150,6 @@ export function BentoSection() {
                 <TherapyCard {...therapy} />
               </div>
             ))}
-          </div>
-          
-          {/* Último card centralizado */}
-          <div className="mt-16 md:mt-20 lg:mt-24 flex justify-center">
-            <div 
-              className="w-full md:w-2/3 2xl:w-1/2 animate-in slide-in-from-bottom-4 fade-in duration-700"
-              style={{ animationDelay: `${4 * 150}ms` }}
-            >
-              <TherapyCard {...therapies[4]} />
-            </div>
           </div>
         </div>
       </div>
