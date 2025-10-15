@@ -34,11 +34,11 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps            # 'ftps' = TLS explícito; use 'ftp' se o host não suportar TLS
-          port: 21                  # ajuste se seu host usar outra porta
-          local-dir: dist/          # precisa terminar com "/"
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}  # precisa terminar com "/"
-          exclude: |                # mantém defaults e adiciona extras
+          protocol: ftps            
+          port: 21                  
+          local-dir: dist/          
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}  # repositories/mary-blue-lp/
+          exclude: |                
             **/.git*
             **/.git*/**
             **/node_modules/**
