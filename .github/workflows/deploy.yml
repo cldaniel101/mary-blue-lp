@@ -27,6 +27,12 @@ jobs:
           npm ci
           npm run build
 
+      - name: Inspect build output
+        run: |
+          echo "Listing dist/"
+          ls -la dist || true
+          find dist -maxdepth 2 -type f | head -n 50
+
       # Deploy por FTP/FTPS (recomendado FTPS explícito)
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -37,7 +43,7 @@ jobs:
           protocol: ftps            
           port: 21                  
           local-dir: dist/          
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}  # repositories/mary-blue-lp/
+          server-dir: /  # repositories/mary-blue-lp/
           exclude: |                
             **/.git*
             **/.git*/**
