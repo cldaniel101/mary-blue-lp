@@ -1,6 +1,6 @@
 import React from "react"
-import { Button } from "./ui/button"
 import RippleButton from "./Hero/ripple-button"
+import { trackLeadEvent } from "../lib/metaPixel"
 
 export function CTASection() {
   return (
@@ -108,7 +108,12 @@ export function CTASection() {
             Pronto(a) para dar o próximo passo?
           </h2>
         </div>
-        <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://wa.me/5595984078006"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={trackLeadEvent}
+        >
           <RippleButton variant="secondary">Agendar Consulta no WhatsApp</RippleButton>
         </a>
       </div>

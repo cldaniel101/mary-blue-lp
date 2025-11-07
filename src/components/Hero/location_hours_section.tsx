@@ -1,4 +1,5 @@
 import RippleButton from "./ripple-button";
+import { trackLeadEvent } from "../../lib/metaPixel";
 
 /**
  * Seção "Localização & horários" com mapa do Google à direita.
@@ -12,6 +13,9 @@ export default function LocationHoursSection() {
     "Olá, gostaria de agendar uma consulta."
   );
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+  const handleLeadClick = () => {
+    trackLeadEvent()
+  }
 
   // Mapa integrado com o endereço específico da Mary Blue
   const mapSrc =
@@ -111,6 +115,7 @@ export default function LocationHoursSection() {
                             href={whatsappHref}
                             variant="primary"
                             className="px-6 py-2"
+                            onClick={handleLeadClick}
                           >
                             Agendar Consulta
                           </RippleButton>

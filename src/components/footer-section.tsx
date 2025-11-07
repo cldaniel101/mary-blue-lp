@@ -4,6 +4,7 @@ import { Instagram, Mail, Shield, FileText, Heart } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import logoOficial from '../assets/logos/logo-oficial.png';
+import { trackLeadEvent } from "../lib/metaPixel"
 
 export function FooterSection() {
   return (
@@ -75,6 +76,7 @@ export function FooterSection() {
               href="https://wa.me/5595984078006" 
               label="WhatsApp"
               bgColor="bg-[#25D366]"
+              onClick={trackLeadEvent}
             >
               <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" />
             </SocialButton>
@@ -151,11 +153,13 @@ function SocialButton({
   label,
   bgColor,
   children,
+  onClick,
 }: {
   href: string
   label: string
   bgColor: string
   children: React.ReactNode
+  onClick?: () => void
 }) {
   return (
     <a
@@ -163,6 +167,7 @@ function SocialButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
+      onClick={onClick}
       className={`h-9 w-9 rounded-full ${bgColor} text-white flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#3C8DBC]/50`}
     >
       {children}

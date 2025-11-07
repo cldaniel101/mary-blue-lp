@@ -6,6 +6,7 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import RippleButton from './Hero/ripple-button'
+import { trackLeadEvent } from '../lib/metaPixel'
 
 // Importando os assets das imagens de depoimentos e vídeo
 import depo1 from '../assets/testimonials/1.jpeg'
@@ -175,7 +176,12 @@ export function TestimonialGridSection() {
             </p>
           </div>
           
-          <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://wa.me/5595984078006"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackLeadEvent}
+          >
             <RippleButton variant="primary">
               <span className="flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

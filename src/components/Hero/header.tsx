@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import RippleButton from "./ripple-button"
 import logoOficial from '../../assets/logos/logo-oficial.png'
+import { trackLeadEvent } from "../../lib/metaPixel"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -52,6 +53,9 @@ export default function Header() {
   }
 
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+  const handleLeadClick = () => {
+    trackLeadEvent()
+  }
 
   return (
     <>
@@ -89,7 +93,7 @@ export default function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </button>
-          <RippleButton className="z-10" variant="default" href={whatsappHref}>
+          <RippleButton className="z-10" variant="default" href={whatsappHref} onClick={handleLeadClick}>
             Agendar Consulta
           </RippleButton>
         </div>
@@ -180,7 +184,10 @@ export default function Header() {
             }}
           >
             <RippleButton 
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                handleLeadClick()
+                setIsMenuOpen(false)
+              }}
               className="text-lg px-8 py-4"
               variant="default"
               href={whatsappHref}

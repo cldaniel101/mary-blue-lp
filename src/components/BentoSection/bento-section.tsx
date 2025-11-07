@@ -1,3 +1,5 @@
+import { trackLeadEvent } from "../../lib/metaPixel"
+
 const TherapyCard = ({ title, benefits, indications }: { title: string; benefits: string; indications: string }) => (
   <div className="group flip-container relative w-full cursor-pointer">
     {/* Card Container */}
@@ -81,6 +83,7 @@ const TherapyCard = ({ title, benefits, indications }: { title: string; benefits
             href={`https://wa.me/5595984078006?text=Olá! Gostaria de agendar uma consulta para ${title}.`}
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={trackLeadEvent}
             className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-medium text-lg md:text-xl rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105 font-inter"
           >
             Agendar {title}

@@ -1,5 +1,6 @@
 import RippleButton from "./ripple-button"
 import maryBlueMockCircle from '../../assets/img/mary-blue-mock-circle.png'
+import { trackLeadEvent } from '../../lib/metaPixel'
 
 export default function HeroContent() {
   const whatsappNumber = "5595984078006"; // +55 95 98407-8006
@@ -7,6 +8,9 @@ export default function HeroContent() {
     "Olá, gostaria de agendar uma consulta."
   );
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
+  const handleLeadClick = () => {
+    trackLeadEvent()
+  }
 
   return (
     <main className="flex-1 flex flex-col z-20 min-h-0 overflow-hidden">
@@ -63,7 +67,7 @@ export default function HeroContent() {
           {/* Botões (leves ajustes de espaçamento) */}
           <div className="flex flex-col gap-2">
             <div className="w-full">
-              <RippleButton variant="default" href={whatsappHref}>
+              <RippleButton variant="default" href={whatsappHref} onClick={handleLeadClick}>
                 Agendar Consulta
               </RippleButton>
             </div>
@@ -117,7 +121,7 @@ export default function HeroContent() {
                 Nossos Tratamentos
               </button>
               <div className="w-full sm:w-auto">
-                <RippleButton variant="default" href={whatsappHref}>
+                <RippleButton variant="default" href={whatsappHref} onClick={handleLeadClick}>
                   Agendar Consulta
                 </RippleButton>
               </div>

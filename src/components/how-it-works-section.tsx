@@ -1,5 +1,6 @@
 import React from "react"
 import { FileText, ClipboardList, Zap, TrendingUp } from "lucide-react"
+import { trackLeadEvent } from "../lib/metaPixel"
 
 const ProcessStep = ({ 
   number, 
@@ -116,7 +117,12 @@ export function HowItWorksSection() {
           <p className="text-foreground/80 text-xl md:text-2xl text-center max-w-2xl leading-relaxed">
             Cada etapa é cuidadosamente planejada para garantir os melhores resultados no seu tratamento.
           </p>
-          <a href="https://wa.me/5595984078006" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://wa.me/5595984078006"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackLeadEvent}
+          >
             <button className="px-8 py-4 bg-primary text-white font-medium text-xl rounded-full shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 hover:scale-105">
               Agendar Avaliação
             </button>
